@@ -33,6 +33,7 @@ import {RoutingModule} from './modules/routing.module';
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule, 
     RoutingModule,
     NgbModalModule.forRoot(),
     CalendarModule.forRoot(),
