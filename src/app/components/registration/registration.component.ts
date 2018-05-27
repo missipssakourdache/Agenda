@@ -1,3 +1,4 @@
+import {RestClientService} from '../../services/rest-client.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
@@ -7,8 +8,19 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() {}
+  constructor(private restClientService: RestClientService) {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 
+  onSaveUser = function(user) {
+    
+    console.log("on save");
+    console.log(user);
+    this.restClientService.saveUser(user)
+      .subscribe(
+        data => {
+          alert(data.data);
+        }, 
+        error => this.errorMessage = error);
+  }
 }

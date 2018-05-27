@@ -17,6 +17,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {RegistrationComponent} from './components/registration/registration.component';
 import {HelpComponent} from './components/help/help.component';
 import {RoutingModule} from './modules/routing.module';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {RoutingModule} from './modules/routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule, 
+    HttpModule,
+    BrowserAnimationsModule,
     RoutingModule,
     NgbModalModule.forRoot(),
     CalendarModule.forRoot(),

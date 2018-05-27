@@ -11,7 +11,7 @@ import { map } from "rxjs/operators";
 })
 export class RestClientService {
   serverPort = "9999";
-  serverUrl = 'http://localhost:'+this.serverPort;
+  serverUrl = 'http://localhost:'+this.serverPort+"/";
   saveUserUrl = 'api/save-user';
   saveEventUrl = 'api/save-event';
   deleteEventUrl = 'api/delete-event';
